@@ -57,4 +57,4 @@ async def delete_task(task , db):
     except Exception as e:
         await db.rollback()
         raise e
-    return False
+

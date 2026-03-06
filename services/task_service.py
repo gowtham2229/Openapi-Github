@@ -14,9 +14,10 @@ async def create_task_service(task , db):
         return{
         'status':1,
         'message':'Task created successfully',
+        'task_id':new_task.id
     }
     except Exception as e:
-          raise HTTPException(status_code=500, detail=str(e)) 
+          raise HTTPException(status_code=500, detail=str(e)) # Handle exceptions and return appropriate error responses
     
 async def get_task_service(db):
     try:
