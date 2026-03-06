@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, StrictInt
 
 
 class TaskCreate(BaseModel):
@@ -6,7 +6,7 @@ class TaskCreate(BaseModel):
     description: str
 
 class TaskUpdate(BaseModel):
-    task_id : int
+    task_id : StrictInt
     title: str
     description: str
    
@@ -26,4 +26,4 @@ class GetTask(BaseModel):
     task_id : int
 
 class GetDeleteTask(BaseModel):
-    task_id : int
+    task_id :StrictInt
