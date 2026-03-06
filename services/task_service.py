@@ -48,7 +48,7 @@ async def update_task_service(task , db):
         'data':res
     }
     except Exception as e:
-          raise HTTPException(status_code=500, detail=str(e))
+          raise HTTPException(status_code=500, detail=str(e)) # Handle exceptions and return appropriate error responses
 
 async def delete_task_service(task , db):
     try:
